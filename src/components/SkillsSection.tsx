@@ -2,52 +2,35 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { 
-  Code2, Brain, Palette, Database, 
-  Globe, Smartphone, Cloud, Terminal 
+  Code2, Brain, Server, Wrench,
+  FileCode, Database, Cpu, GitBranch
 } from "lucide-react";
 
-const skills = [
+// Organized skill categories
+const skillCategories = [
   {
-    icon: Brain,
-    name: "Machine Learning",
-    description: "PyTorch, TensorFlow, Scikit-learn",
-    level: 90,
-    color: "from-primary to-primary/60",
-  },
-  {
+    title: "Frontend & Web Development",
     icon: Code2,
-    name: "Frontend Development",
-    description: "React, TypeScript, Next.js",
-    level: 95,
+    color: "from-primary to-primary/60",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Responsive UI", "REST APIs"],
+  },
+  {
+    title: "Backend & Systems",
+    icon: Server,
     color: "from-accent to-accent/60",
+    skills: ["Node.js", "Express.js", "Flask", "API Development", "System Design Basics", "MongoDB", "SQL"],
   },
   {
-    icon: Palette,
-    name: "UI/UX Design",
-    description: "Figma, Framer, Tailwind CSS",
-    level: 85,
+    title: "AI / ML Skills",
+    icon: Brain,
     color: "from-primary to-accent",
+    skills: ["Python", "NumPy", "Pandas", "Machine Learning Fundamentals", "Generative AI Concepts", "Chatbot Systems", "Resume Analysis Systems"],
   },
   {
-    icon: Database,
-    name: "Backend & APIs",
-    description: "Node.js, Python, PostgreSQL",
-    level: 80,
-    color: "from-primary/80 to-primary/40",
-  },
-  {
-    icon: Globe,
-    name: "Web Technologies",
-    description: "HTML, CSS, JavaScript, REST",
-    level: 95,
-    color: "from-accent/80 to-accent/40",
-  },
-  {
-    icon: Cloud,
-    name: "Cloud & DevOps",
-    description: "AWS, Docker, CI/CD",
-    level: 75,
-    color: "from-primary to-primary/50",
+    title: "Tools & Platforms",
+    icon: Wrench,
+    color: "from-accent/80 to-primary/60",
+    skills: ["Git", "GitHub", "VS Code", "Docker (Basics)", "Agile Development"],
   },
 ];
 
@@ -59,7 +42,7 @@ export function SkillsSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -80,50 +63,50 @@ export function SkillsSection() {
         >
           <span className="text-primary font-medium text-sm uppercase tracking-widest">Skills</span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">
-            My <span className="gradient-text">Toolkit</span>
+            My <span className="gradient-text">Technical Arsenal</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Technologies and skills I use to bring ideas to life
+            Technologies and skills I use to bring AI-powered ideas to life
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Skills Grid - 2x2 Layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 gap-6"
         >
-          {skills.map((skill) => (
+          {skillCategories.map((category) => (
             <motion.div
-              key={skill.name}
+              key={category.title}
               variants={itemVariants}
               className="glass-card p-6 hover-lift group"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${skill.color} text-primary-foreground`}>
-                  <skill.icon className="w-6 h-6" />
+              {/* Category Header */}
+              <div className="flex items-center gap-4 mb-5">
+                <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color} text-primary-foreground`}>
+                  <category.icon className="w-6 h-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {skill.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{skill.description}</p>
-                </div>
+                <h3 className="font-display font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+                  {category.title}
+                </h3>
               </div>
 
-              {/* Progress Bar */}
-              <div className="relative h-2 bg-secondary rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={isInView ? { width: `${skill.level}%` } : {}}
-                  transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                  className={`absolute inset-y-0 left-0 bg-gradient-to-r ${skill.color} rounded-full`}
-                />
-              </div>
-              <div className="flex justify-between mt-2">
-                <span className="text-xs text-muted-foreground">Proficiency</span>
-                <span className="text-xs font-medium text-foreground">{skill.level}%</span>
+              {/* Skills Tags */}
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, index) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ delay: 0.3 + index * 0.05 }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className="px-3 py-1.5 text-sm rounded-full bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
               </div>
             </motion.div>
           ))}
