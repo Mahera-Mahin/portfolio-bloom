@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
   { name: "Gallery", href: "#gallery" },
-  { name: "Achievements", href: "#achievements" },
+  { name: "Experience", href: "#experience" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -51,7 +52,7 @@ export function Header() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <span className="gradient-text">Portfolio</span>
+          <span className="gradient-text">Mahera</span>
         </motion.a>
 
         {/* Desktop Navigation */}

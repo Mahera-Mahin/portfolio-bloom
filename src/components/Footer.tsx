@@ -23,10 +23,10 @@ export function Footer() {
               className="text-xl font-display font-bold"
               whileHover={{ scale: 1.02 }}
             >
-              <span className="gradient-text">Alex Chen</span>
+              <span className="gradient-text">Mahera</span>
             </motion.a>
-            <p className="text-sm text-muted-foreground mt-1 flex items-center justify-center md:justify-start gap-1">
-              Made with <Heart className="w-3 h-3 text-accent" /> in San Francisco
+            <p className="text-sm text-muted-foreground mt-1">
+              AI Engineer | Frontend Developer | Product Intern
             </p>
           </div>
 
@@ -60,8 +60,8 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Alex Chen. All rights reserved.
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
+            © {new Date().getFullYear()} Mahera. Made with <Heart className="w-3 h-3 text-accent" /> and AI
           </p>
         </div>
       </div>

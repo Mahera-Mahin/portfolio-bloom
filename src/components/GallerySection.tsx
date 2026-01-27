@@ -13,44 +13,44 @@ import galleryBooks from "@/assets/gallery-books.jpg";
 const galleryItems = [
   {
     id: 1,
-    title: "Mountain Retreat",
-    category: "Travel",
-    description: "Exploring the Swiss Alps",
+    title: "AI Development",
+    category: "AI",
+    description: "Building intelligent systems",
     image: galleryMountains,
   },
   {
     id: 2,
-    title: "Code & Coffee",
-    category: "Lifestyle",
-    description: "My daily development setup",
+    title: "Coding Setup",
+    category: "Coding",
+    description: "My daily development workspace",
     image: galleryWorkspace,
   },
   {
     id: 3,
-    title: "Team Hackathon",
+    title: "Hackathon Win",
     category: "Events",
-    description: "Winning project at HackMIT",
+    description: "Team collaboration and innovation",
     image: galleryHackathon,
   },
   {
     id: 4,
-    title: "Art Exhibition",
-    category: "Hobbies",
-    description: "Contemporary art exploration",
+    title: "XR/VR Exploration",
+    category: "XR",
+    description: "Immersive technology research",
     image: galleryArt,
   },
   {
     id: 5,
-    title: "Tech Conference",
+    title: "Tech Meetup",
     category: "Events",
-    description: "Speaking at React Summit",
+    description: "Networking with industry experts",
     image: galleryConference,
   },
   {
     id: 6,
-    title: "Book Collection",
-    category: "Hobbies",
-    description: "Favorite reads of 2024",
+    title: "Product Design",
+    category: "Design",
+    description: "UI/UX and product thinking",
     image: galleryBooks,
   },
 ];
@@ -74,7 +74,7 @@ export function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="py-24 md:py-32" ref={ref}>
+    <section id="gallery" className="py-24 md:py-32 bg-secondary/30" ref={ref}>
       <div className="section-container">
         {/* Section Header */}
         <motion.div
@@ -88,7 +88,7 @@ export function GallerySection() {
             Beyond <span className="gradient-text">The Code</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            A glimpse into my life, hobbies, and adventures
+            A glimpse into AI, XR, coding, and product design
           </p>
         </motion.div>
 
