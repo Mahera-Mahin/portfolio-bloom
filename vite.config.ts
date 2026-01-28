@@ -12,7 +12,7 @@ export default defineConfig({
   },
 
   preview: {
-    allowedHosts: ["portfolio-bloom.onrender.com"],
+    allowedHosts: ["*.onrender.com"],
   },
 
   plugins: [react()],
