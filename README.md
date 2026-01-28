@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+Portfolio-Bloom is a modern, responsive personal portfolio website built to showcase projects, skills, and professional experience with a clean UI and smooth performance.
 
-## Project info
+It’s designed to be simple, elegant, and easy to customize — perfect for students, developers, and professionals who want a strong online presence.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+✨ Features
 
-## How can I edit this code?
+🎨 Clean & minimal portfolio design
 
-There are several ways of editing your application.
+⚡ Fast performance with Vite
 
-**Use Lovable**
+📱 Fully responsive (mobile, tablet, desktop)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+🧩 Reusable UI components
 
-Changes made via Lovable will be committed automatically to this repo.
+🎯 Easy customization for personal branding
 
-**Use your preferred IDE**
+🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+React
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+TypeScript
 
-Follow these steps:
+Vite
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Tailwind CSS
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+shadcn/ui
 
-# Step 3: Install the necessary dependencies.
-npm i
+📂 Project Structure
+portfolio-bloom/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── package.json
+└── README.md
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/Mahera-Mahin/portfolio-bloom.git
+
+2️⃣ Navigate to the project folder
+cd portfolio-bloom
+
+3️⃣ Install dependencies
+npm install
+
+4️⃣ Run the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The app will be available at:
 
-**Use GitHub Codespaces**
+http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🎨 Customization
 
-## What technologies are used for this project?
+You can easily customize:
 
-This project is built with:
+Content: Update components inside src/pages
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Styling: Modify Tailwind classes
 
-## How can I deploy this project?
+Theme & UI: Extend or edit shadcn/ui components
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Assets: Replace images in src/assets
